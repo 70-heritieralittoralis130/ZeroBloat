@@ -6,7 +6,7 @@ Built using a Go backend and a Svelte frontend powered by Wails, it provides a c
 
 ---
 
-![License](https://img.shields.io/github/license/AdhwaithAS/ZeroBloat?style=flat-square)
+![License](https://img.shields.io/github/license/AdhwaithAS/ZeroBloat)
 ![Wails](https://img.shields.io/badge/built%20with-Wails%20v2-00add8?style=flat-square&logo=go)
 ![Svelte](https://img.shields.io/badge/frontend-Svelte%20%2B%20Vite-ff3e00?style=flat-square&logo=svelte)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=flat-square)
