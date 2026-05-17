@@ -1,6 +1,8 @@
-# ZeroBloat 🚀
+# ZeroBloat
 
-ZeroBloat is a modern, lightweight, and user-friendly desktop application designed to help you declutter and safely debloat your Android devices via ADB (Android Debug Bridge). Built with a blazing fast Go backend and a highly responsive Svelte frontend powered by Wails, ZeroBloat gives you granular control over what runs on your phone.
+ZeroBloat is a lightweight desktop utility designed to uninstall unwanted pre-installed system apps, carrier bloatware, and trackers from Android devices via ADB (Android Debug Bridge). No root access is required.
+
+Built using a Go backend and a Svelte frontend powered by Wails, it provides a clean graphical interface to safely manage your device's packages.
 
 ---
 
@@ -11,83 +13,92 @@ ZeroBloat is a modern, lightweight, and user-friendly desktop application design
 
 ---
 
-## ✨ Features
+## 📸 Screenshots
 
-- **⚡ Instant ADB Detection**: Auto-detects connected devices over USB debugging instantly without manual configuration.
-- **🗂️ Card Grid Interface**: Say goodbye to boring tables! Enjoy a gorgeous, modern card grid layout with app icons and metadata.
-- **🏷️ Intelligent App Categorization**:
-  - 🔴 **Safe to Remove**: Automatically detects known manufacturer bloatware.
-  - 🟢 **System Core**: Identifies essential system-level apps.
-  - 🔵 **Third Party**: Displays user-installed applications.
-- **🔍 Advanced Filtering & Search**: Filter packages by category (All, Safe to Remove, System Core, Third Party) and query them in real-time.
-- **📌 Reactive Pinning**: Selected packages are instantly pinned and sorted to the top of the grid for easy review before deletion.
-- **🛡️ Smart Safety Modal**: Deep confirmation system that pops up warnings when trying to delete crucial **System Core** apps, preventing accidental phone bricking.
-- **🌗 Native Theme Toggle**: Switch effortlessly between premium Light Mode and Dark Mode.
-- **🔧 ADB Driver Helper**: Built-in helper to quickly download ADB platform tools.
+![ZeroBloat Dashboard](./screenshots/image.png)
+
+![ZeroBloat About Modal](./screenshots/image2.png)
 
 ---
 
-## 🛠️ Tech Stack
+## ⚙️ Features
 
-- **Backend**: Go (Golang)
-- **Frontend**: Svelte & Vanilla CSS
-- **Bundler & Dev Server**: Vite
-- **Desktop Runtime Framework**: [Wails v2](https://wails.io/)
+* **Automatic Device Detection**: Instantly recognizes connected Android devices via USB debugging.
+* **Background ADB Execution**: Runs all ADB operations silently in the background. Command prompt (CMD) or terminal windows will not flash on the screen.
+* **Intelligent Categorization**:
+  * **Safe to Remove**: Identifies known carrier and manufacturer bloatware.
+  * **System Core**: Displays sensitive Android operating system components.
+  * **Third Party**: Lists standard user-installed applications.
+* **Search & Filters**: Filter packages by category and search in real-time by package ID or app title.
+* **Reactive Pinning**: Selected packages are automatically pinned and sorted to the top of the list.
+* **Safety Confirmation**: Triggers double-confirmation warnings when attempting to delete System Core applications.
+* **Community Integrations**: Simple Info panel linking directly to the GitHub repository and Buy Me a Coffee page.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation & Usage
+
+You do not need to compile the code or set up a developer environment. Pre-compiled, single-file executables are available for download.
+
+### Steps to Run:
+
+1. Enable **USB Debugging** on your phone:
+   * Go to **Settings** -> **About Phone** and tap **Build Number** 7 times.
+   * Go back, open **Developer Options**, and toggle **USB Debugging** on.
+2. Download the pre-built zip for your operating system from the [Releases](https://github.com/AdhwaithAS/ZeroBloat/releases) page.
+3. Extract the downloaded folder and launch:
+   * **Windows**: Run `ZeroBloat.exe`.
+   * **macOS**: Move `ZeroBloat.app` to your Applications folder and open it.
+   * **Linux**: Mark `ZeroBloat.AppImage` as executable (`chmod +x ZeroBloat-Linux.AppImage`) and launch it.
+4. Connect your Android device to your computer via a USB cable. The application will auto-detect the device and retrieve the package list.
+
+---
+
+## 🛠️ Building From Source (Developers)
+
+If you wish to compile or modify ZeroBloat locally, follow these steps:
 
 ### Prerequisites
 
-To build ZeroBloat from source, you'll need:
-
+The following tools must be installed on your machine:
 1. **Go** (v1.21 or higher) -> [Download Go](https://golang.org/dl/)
 2. **Node.js** (v18 or higher) & npm -> [Download Node](https://nodejs.org/)
-3. **Wails CLI** -> Install via:
+3. **Wails CLI** -> Install via terminal:
    ```bash
    go install github.com/wailsapp/wails/v2/cmd/wails@latest
    ```
-4. **ADB (Android Debug Bridge)** -> Set up in your system `PATH`. If missing, download platform tools directly using the in-app helper link.
 
-### Development Mode
+### Setup Instructions:
 
-Run the live development server:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AdhwaithAS/ZeroBloat.git
+   cd ZeroBloat
+   ```
 
-```bash
-wails dev
-```
+2. **Run in Development Mode**:
+   Spins up a local development window with hot-reloading for Go backend and Svelte frontend changes:
+   ```bash
+   wails dev
+   ```
 
-This starts a local Wails window and watches for code changes on both Go backend and Svelte frontend, instantly reloading them.
-
-### Building for Production
-
-Compile a highly-optimized, single binary executable for your host platform:
-
-```bash
-wails build
-```
-
-The compiled installer/executable will be generated inside the `build/bin/` folder.
-
----
-
-## 🤝 Contributing
-
-Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct and how to submit pull requests.
+3. **Build the Production Executable**:
+   Compiles a highly-optimized single-file binary for your host operating system inside the `build/bin/` folder:
+   ```bash
+   wails build
+   ```
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for more details.
 
 ---
 
-## 👤 Author
+## 👤 Author & Support
 
 **Adhwaith AS**
-- Email: [adhwaithas2007@gmail.com](mailto:adhwaithas2007@gmail.com)
-- GitHub: [@AdhwaithAS](https://github.com/AdhwaithAS)
+* **GitHub**: [@AdhwaithAS](https://github.com/AdhwaithAS)
+* **Email**: [adhwaithas2007@gmail.com](mailto:adhwaithas2007@gmail.com)
+* Consider supporting the project here: ☕ [Buy Me a Coffee](https://buymeacoffee.com/adhwaithas)
